@@ -23,3 +23,11 @@ explore:  sales_order_detail{
     relationship: many_to_one
   }
 }
+
+explore:  sales_order_header {
+  join: customer{
+    type: inner
+    sql_on: ${sales_order_header.customer_id} = ${customer.customer_id} ;;
+    relationship: many_to_one
+  }
+}
