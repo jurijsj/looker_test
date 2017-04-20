@@ -9,3 +9,17 @@ include: "*.dashboard"
 explore: build_version {}
 
 explore: error_log {}
+
+
+explore:  sales_order_detail{
+  join: sales_order_header {
+    type: inner
+    sql_on: ${sales_order_detail.sales_order_id} = ${sales_order_header.sales_order_id};;
+    relationship: many_to_one
+  }
+  join: product {
+    type: inner
+    sql_on: ${sales_order_detail.product_id} = ${product.product_id};;
+    relationship: many_to_one
+  }
+}
