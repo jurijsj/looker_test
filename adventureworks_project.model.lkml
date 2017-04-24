@@ -6,11 +6,6 @@ include: "*.view"
 # include all the dashboards
 include: "*.dashboard"
 
-explore: build_version {}
-
-explore: error_log {}
-
-
 explore:  sales_order_detail{
   join: sales_order_header {
     sql_on: ${sales_order_detail.sales_order_id} = ${sales_order_header.sales_order_id};;
