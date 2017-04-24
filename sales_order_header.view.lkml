@@ -133,18 +133,18 @@ view: sales_order_header {
     sql: ${TABLE}.Status ;;
   }
 
-  dimension: sub_total {
-    type: string
+  measure: sub_total {
+    type: sum
     sql: ${TABLE}.SubTotal ;;
   }
 
-  dimension: tax_amt {
-    type: string
+  measure: tax_amt {
+    type: sum
     sql: ${TABLE}.TaxAmt ;;
   }
 
-  dimension: total_due {
-    type: string
+  measure: total_due {
+    type: sum
     sql: ${TABLE}.TotalDue ;;
   }
 
