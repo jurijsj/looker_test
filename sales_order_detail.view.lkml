@@ -63,10 +63,16 @@ view: sales_order_detail {
   }
 
 
-  measure: tmp {
+  measure: OrderQuantity {
+    type: sum
+    sql: ${order_qty};;
+  }
+
+  measure: unitPriceDiscount {
     type: sum
     sql: ${unit_price_discount};;
   }
+
   measure:  sumUnitPrice {
     type:  sum
     sql:  ${unit_price} ;;
