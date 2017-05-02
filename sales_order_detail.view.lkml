@@ -62,8 +62,14 @@ view: sales_order_detail {
     drill_fields: [sales_order_detail_id, product.product_id, product.name, product.thumbnail_photo_file_name]
   }
 
+
   measure: tmp {
     type: sum
     sql: ${unit_price_discount};;
+  }
+  measure:  sumUnitPrice {
+    type:  sum
+    sql:  ${unit_price} ;;
+
   }
 }
