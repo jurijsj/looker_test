@@ -59,7 +59,7 @@ view: sales_order_detail {
 
   measure: count {
     type: count
-    drill_fields: [sales_order_detail_id, product.product_id, product.name, product.thumbnail_photo_file_name]
+    drill_fields: [sales_order_detail_id, product_id]
   }
 
 
